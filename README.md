@@ -1,1 +1,28 @@
-# guess-my-number-
+# guess-my-number-import random
+again = 'y'
+while again =='y':
+    secret = random.randint(1,99)
+
+    guess = 0
+    tries = 0
+    print("Can you guess my  secret number?")
+    print("It is a number between 1 and 99. You have 6 tries.")
+
+    while guess != secret and tries < 6:
+        print("What's your guess?")
+        guess = int(input())
+        if guess< secret:
+            print("Too low!")
+        elif guess > secret:
+            print("Too high")
+        tries = tries + 1
+
+    if guess == secret:
+        print("Congrats you,re still a bozo")
+    else :
+        print("Haaaa you suck you got no more guesses!!")
+        print('The secret number was ; ', secret)
+    print("Do you want to play another game  y/n  ? \n")
+    again = input()
+print('Game Over')
+exit()
